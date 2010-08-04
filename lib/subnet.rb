@@ -38,11 +38,10 @@ end
   subnets.each do |subnet|
     (0..255).each { |i| redis.rpush(subnets_key(site), "10.#{subnet}.#{i}.0") }
 
-    # KaVLAN?
-    # https://www.grid5000.fr/mediawiki/index.php/Xen_related_tools#choose_static_ip_address
-    #(0..255).each { |i| redis.rpush(subnets_key(site), "10.#{subnet + 2}.#{i}.0") }
+    # KaVLAN? https://www.grid5000.fr/mediawiki/index.php/Xen_related_tools#choose_static_ip_address
+    (0..255).each { |i| redis.rpush(subnets_key(site), "10.#{subnet + 2}.#{i}.0") }
 
-    # Don't include subnet 255 because the two last IPs are used by the infrastructure
+    # Don't include subnet 255 because the last two IPs are used by the infrastructure
     # (DHCP server and gateway)
     (0..254).each { |i| redis.rpush(subnets_key(site), "10.#{subnet + 3}.#{i}.0") }
   end
@@ -78,10 +77,6 @@ error 403 do
 end
 
 post '/sites/:site/jobs/:job_id/subnets' do |site, job_id|
-#  job_id = params[:job_id]
-#  site = params[:site]
-#  return 400 if job_id.nil? || site.nil?
-
   begin
     job = grid.sites[site.to_sym].jobs[job_id.to_sym]
     return 403 if job['state'] != 'running'
@@ -97,4 +92,16 @@ post '/sites/:site/jobs/:job_id/subnets' do |site, job_id|
   else
     return 404
   end
+end
+
+# This frees all subnets allocated to the job
+delete '/sites/:site/jobs/:job_id/subnets' do |site, job_id|
+  subnets = redis.smembers(job_key(site, job_id))
+  subnets.each do |subnet|
+    redis.srem(job_key(site, job_id), subnet)
+    redis.rpush(subnets_key(site), subnet)
+  end
+  redis.srem(jobs_key(site), job_id)
+  redis.del(job_key(site, job_id))
+  return 204
 end
