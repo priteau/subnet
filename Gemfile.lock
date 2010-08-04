@@ -1,35 +1,41 @@
 --- 
-hash: 84b2368ea3343f7a3805081b5e2767513f6bd050
+dependencies: 
+  restfully: 
+    group: 
+    - :default
+    version: ">= 0"
+  SystemTimer: 
+    group: 
+    - :default
+    version: ">= 0"
+  sinatra: 
+    group: 
+    - :default
+    version: ">= 0"
+  redis: 
+    group: 
+    - :default
+    version: ">= 0"
+specs: 
+- redis: 
+    version: 2.0.4
+- json: 
+    version: 1.4.3
+- rack: 
+    version: 1.2.1
+- sinatra: 
+    version: "1.0"
+- mime-types: 
+    version: "1.16"
+- rest-client: 
+    version: 1.6.0
+- backports: 
+    version: 1.18.1
+- SystemTimer: 
+    version: "1.2"
+- restfully: 
+    version: 0.5.10
+hash: e7303ca35da96e3f68e43f701203f12e6401c6dd
 sources: 
 - Rubygems: 
     uri: http://rubygems.org
-specs: 
-- backports: 
-    version: 1.18.1
-- json: 
-    version: 1.4.3
-- mime-types: 
-    version: "1.16"
-- rack: 
-    version: 1.2.1
-- redis: 
-    version: 2.0.4
-- rest-client: 
-    version: 1.6.0
-- restfully: 
-    version: 0.5.10
-- sinatra: 
-    version: "1.0"
-dependencies: 
-  redis: 
-    version: ">= 0"
-    group: 
-    - :default
-  restfully: 
-    version: ">= 0"
-    group: 
-    - :default
-  sinatra: 
-    version: ">= 0"
-    group: 
-    - :default

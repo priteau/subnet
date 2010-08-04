@@ -23,9 +23,9 @@ class TestSubnet < Test::Unit::TestCase
 
   def test_post
     post '/', :job_id => 357995, :site => 'rennes'
-    assert_equal '10.136.0.0', last_response.body
+    assert_equal '10.156.0.0', last_response.body
     post '/', :job_id => 357995, :site => 'rennes'
-    assert_equal '10.136.1.0', last_response.body
+    assert_equal '10.156.1.0', last_response.body
     post '/', :job_id => 357995, :site => 'rennes'
     assert_equal 404, last_response.status
   end
