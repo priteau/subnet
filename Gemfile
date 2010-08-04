@@ -1,5 +1,4 @@
 source 'http://rubygems.org'
-gem 'SystemTimer'
 gem 'redis'
 gem 'restfully'
 gem 'sinatra'

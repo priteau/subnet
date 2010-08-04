@@ -1,41 +1,24 @@
---- 
-dependencies: 
-  restfully: 
-    group: 
-    - :default
-    version: ">= 0"
-  SystemTimer: 
-    group: 
-    - :default
-    version: ">= 0"
-  sinatra: 
-    group: 
-    - :default
-    version: ">= 0"
-  redis: 
-    group: 
-    - :default
-    version: ">= 0"
-specs: 
-- redis: 
-    version: 2.0.4
-- json: 
-    version: 1.4.3
-- rack: 
-    version: 1.2.1
-- sinatra: 
-    version: "1.0"
-- mime-types: 
-    version: "1.16"
-- rest-client: 
-    version: 1.6.0
-- backports: 
-    version: 1.18.1
-- SystemTimer: 
-    version: "1.2"
-- restfully: 
-    version: 0.5.10
-hash: e7303ca35da96e3f68e43f701203f12e6401c6dd
-sources: 
-- Rubygems: 
-    uri: http://rubygems.org
+GEM
+  remote: http://rubygems.org/
+  specs:
+    backports (1.18.1)
+    json (1.4.3)
+    mime-types (1.16)
+    rack (1.2.1)
+    redis (2.0.5)
+    rest-client (1.6.0)
+      mime-types (>= 1.16)
+    restfully (0.5.10)
+      backports
+      json (>= 1.2.0)
+      rest-client (>= 1.4)
+    sinatra (1.0)
+      rack (>= 1.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  redis
+  restfully
+  sinatra
