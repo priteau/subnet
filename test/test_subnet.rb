@@ -1,32 +1,33 @@
-$LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
-
-require 'test/unit'
-
-require 'subnet'
-require 'rack/test'
+require 'helper'
 
 class TestSubnet < Test::Unit::TestCase
   include Rack::Test::Methods
 
-  def app
-    Sinatra::Application
-  end
+  context "A subnet application" do
+    setup do
+      PORT = 6379
+      OPTIONS = {:port => PORT, :db => 15, :timeout => 1}
+      @r = prepare Redis.new(OPTIONS)
+    end
 
-  def test_bad_request
-    post '/'
-    assert_equal 400, last_response.status
-    post '/', :job_id => 357995
-    assert_equal 400, last_response.status
-    post '/', :site => 'rennes'
-    assert_equal 400, last_response.status
-  end
+    def app
+      Sinatra::Application
+    end
 
-  def test_post
-    post '/', :job_id => 357995, :site => 'rennes'
-    assert_equal '10.156.0.0', last_response.body
-    post '/', :job_id => 357995, :site => 'rennes'
-    assert_equal '10.156.1.0', last_response.body
-    post '/', :job_id => 357995, :site => 'rennes'
-    assert_equal 404, last_response.status
+    should "catch bad requests" do
+      post '/'
+      assert_equal 404, last_response.status
+      post '/sites/rennes', :site => 'rennes'
+      assert_equal 404, last_response.status
+    end
+
+    should "allocate subnets" do
+      post '/sites/rennes/jobs/357995/subnets'
+      assert_equal '10.156.0.0', last_response.body
+      post '/sites/rennes/jobs/357995/subnets'
+      assert_equal '10.156.1.0', last_response.body
+      post '/sites/rennes/jobs/357995/subnets'
+      assert_equal '10.156.2.0', last_response.body
+    end
   end
 end
