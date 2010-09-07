@@ -1,16 +1,16 @@
 GEM
   remote: http://rubygems.org/
   specs:
-    addressable (2.2.0)
+    addressable (2.2.1)
     backports (1.18.1)
     crack (0.1.8)
-    json (1.4.3)
+    json (1.4.6)
     mime-types (1.16)
     rack (1.2.1)
     rack-test (0.5.4)
       rack (>= 1.0)
-    redis (2.0.5)
-    rest-client (1.6.0)
+    redis (2.0.6)
+    rest-client (1.6.1)
       mime-types (>= 1.16)
     restfully (0.5.10)
       backports
