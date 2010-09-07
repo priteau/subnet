@@ -1,11 +1,17 @@
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 
-require 'rubygems'
+ENV['RACK_ENV'] = 'test'
+
 require 'test/unit'
 require 'shoulda'
 require 'rack/test'
+require 'webmock/test_unit'
 
 require 'subnet'
+
+class Test::Unit::TestCase
+  include WebMock
+end
 
 def prepare(redis)
   begin

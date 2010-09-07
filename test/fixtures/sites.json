@@ -1,0 +1,721 @@
+HTTP/1.1 200 OK
+Date: Tue, 07 Sep 2010 17:41:53 GMT
+Server: Apache/2.2.9 (Debian) Phusion_Passenger/2.2.3 mod_ssl/2.2.9 OpenSSL/0.9.8g
+X-Powered-By: Phusion Passenger (mod_rails/mod_rack) 2.2.3
+Vary: Accept,Accept-Encoding
+ETag: "a76122a01441efbff5b347f9f149592ec0af0b61"
+Allow: GET
+Cache-Control: public, must-revalidate, proxy-revalidate, max-age=60, s-maxage=60
+Last-Modified: Mon, 30 Aug 2010 16:05:28 GMT
+Content-Length: 23749
+Status: 200
+Content-Type: application/vnd.fr.grid5000.api.collection+json;level=1
+Age: 18
+X-Cache: HIT from api-proxy.rennes.grid5000.fr
+X-Cache-Lookup: HIT from api-proxy.rennes.grid5000.fr:3128
+Via: 1.0 api-server.orsay.grid5000.fr, 1.0 api-proxy.rennes.grid5000.fr:3128 (squid/2.6.STABLE18)
+Via: 1.1 api-proxy.rennes.grid5000.fr:4444
+Via: 1.1 api.grid5000.fr
+
+{
+  "items": [
+    {
+      "name": "Bordeaux",
+      "latitude": 44.833333,
+      "location": "Bordeaux, France",
+      "security_contact": "bordeaux-staff@lists.grid5000.fr",
+      "uid": "bordeaux",
+      "type": "site",
+      "user_support_contact": "bordeaux-staff@lists.grid5000.fr",
+      "version": "e02cd5e61f7374fd8f28c8c8a6b9843419e3512b",
+      "links": [
+        {
+          "href": "/2.0/grid5000/sites/bordeaux/versions/e02cd5e61f7374fd8f28c8c8a6b9843419e3512b",
+          "title": "version",
+          "rel": "member",
+          "type": "application/vnd.fr.grid5000.api.Version+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/bordeaux/versions",
+          "title": "versions",
+          "rel": "collection",
+          "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/bordeaux",
+          "rel": "self",
+          "type": "application/vnd.fr.grid5000.api.Site+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/bordeaux/clusters",
+          "title": "clusters",
+          "rel": "collection",
+          "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/bordeaux/environments",
+          "title": "environments",
+          "rel": "collection",
+          "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000",
+          "rel": "parent",
+          "type": "application/vnd.fr.grid5000.api.Grid+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/bordeaux/status",
+          "title": "status",
+          "rel": "collection",
+          "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/bordeaux/metrics",
+          "title": "metrics",
+          "rel": "collection",
+          "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/bordeaux/jobs",
+          "title": "jobs",
+          "rel": "collection",
+          "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/bordeaux/deployments",
+          "title": "deployments",
+          "rel": "collection",
+          "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+        }
+      ],
+      "description": "Grid5000 Bordeaux site",
+      "longitude": -0.566667,
+      "email_contact": "bordeaux-staff@lists.grid5000.fr",
+      "web": "http://www.grid5000.fr/mediawiki/index.php/Bordeaux:Home",
+      "sys_admin_contact": "bordeaux-staff@lists.grid5000.fr"
+    },
+    {
+      "name": "Grenoble",
+      "latitude": 45.1833,
+      "location": "Grenoble, France",
+      "security_contact": null,
+      "uid": "grenoble",
+      "type": "site",
+      "user_support_contact": null,
+      "version": "e02cd5e61f7374fd8f28c8c8a6b9843419e3512b",
+      "links": [
+        {
+          "href": "/2.0/grid5000/sites/grenoble/versions/e02cd5e61f7374fd8f28c8c8a6b9843419e3512b",
+          "title": "version",
+          "rel": "member",
+          "type": "application/vnd.fr.grid5000.api.Version+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/grenoble/versions",
+          "title": "versions",
+          "rel": "collection",
+          "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/grenoble",
+          "rel": "self",
+          "type": "application/vnd.fr.grid5000.api.Site+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/grenoble/clusters",
+          "title": "clusters",
+          "rel": "collection",
+          "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/grenoble/environments",
+          "title": "environments",
+          "rel": "collection",
+          "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000",
+          "rel": "parent",
+          "type": "application/vnd.fr.grid5000.api.Grid+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/grenoble/status",
+          "title": "status",
+          "rel": "collection",
+          "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/grenoble/metrics",
+          "title": "metrics",
+          "rel": "collection",
+          "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/grenoble/jobs",
+          "title": "jobs",
+          "rel": "collection",
+          "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/grenoble/deployments",
+          "title": "deployments",
+          "rel": "collection",
+          "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+        }
+      ],
+      "description": "",
+      "longitude": 5.7167,
+      "email_contact": null,
+      "web": null,
+      "sys_admin_contact": null
+    },
+    {
+      "name": "Lille",
+      "latitude": 50.65,
+      "location": "Lille, France",
+      "security_contact": null,
+      "uid": "lille",
+      "type": "site",
+      "user_support_contact": null,
+      "version": "e02cd5e61f7374fd8f28c8c8a6b9843419e3512b",
+      "links": [
+        {
+          "href": "/2.0/grid5000/sites/lille/versions/e02cd5e61f7374fd8f28c8c8a6b9843419e3512b",
+          "title": "version",
+          "rel": "member",
+          "type": "application/vnd.fr.grid5000.api.Version+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/lille/versions",
+          "title": "versions",
+          "rel": "collection",
+          "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/lille",
+          "rel": "self",
+          "type": "application/vnd.fr.grid5000.api.Site+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/lille/clusters",
+          "title": "clusters",
+          "rel": "collection",
+          "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/lille/environments",
+          "title": "environments",
+          "rel": "collection",
+          "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000",
+          "rel": "parent",
+          "type": "application/vnd.fr.grid5000.api.Grid+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/lille/status",
+          "title": "status",
+          "rel": "collection",
+          "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/lille/metrics",
+          "title": "metrics",
+          "rel": "collection",
+          "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/lille/jobs",
+          "title": "jobs",
+          "rel": "collection",
+          "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/lille/deployments",
+          "title": "deployments",
+          "rel": "collection",
+          "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+        }
+      ],
+      "description": "",
+      "longitude": 3.0833,
+      "email_contact": null,
+      "web": null,
+      "sys_admin_contact": null
+    },
+    {
+      "name": "Lyon",
+      "latitude": 45.7667,
+      "location": "Lyon, France",
+      "security_contact": null,
+      "uid": "lyon",
+      "type": "site",
+      "user_support_contact": null,
+      "version": "e02cd5e61f7374fd8f28c8c8a6b9843419e3512b",
+      "links": [
+        {
+          "href": "/2.0/grid5000/sites/lyon/versions/e02cd5e61f7374fd8f28c8c8a6b9843419e3512b",
+          "title": "version",
+          "rel": "member",
+          "type": "application/vnd.fr.grid5000.api.Version+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/lyon/versions",
+          "title": "versions",
+          "rel": "collection",
+          "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/lyon",
+          "rel": "self",
+          "type": "application/vnd.fr.grid5000.api.Site+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/lyon/clusters",
+          "title": "clusters",
+          "rel": "collection",
+          "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/lyon/environments",
+          "title": "environments",
+          "rel": "collection",
+          "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000",
+          "rel": "parent",
+          "type": "application/vnd.fr.grid5000.api.Grid+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/lyon/status",
+          "title": "status",
+          "rel": "collection",
+          "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/lyon/metrics",
+          "title": "metrics",
+          "rel": "collection",
+          "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/lyon/jobs",
+          "title": "jobs",
+          "rel": "collection",
+          "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/lyon/deployments",
+          "title": "deployments",
+          "rel": "collection",
+          "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+        }
+      ],
+      "description": "",
+      "longitude": 4.8333,
+      "email_contact": null,
+      "web": null,
+      "sys_admin_contact": null
+    },
+    {
+      "name": "Nancy",
+      "latitude": 48.7,
+      "location": "Nancy, France",
+      "security_contact": null,
+      "uid": "nancy",
+      "type": "site",
+      "user_support_contact": null,
+      "version": "e02cd5e61f7374fd8f28c8c8a6b9843419e3512b",
+      "links": [
+        {
+          "href": "/2.0/grid5000/sites/nancy/versions/e02cd5e61f7374fd8f28c8c8a6b9843419e3512b",
+          "title": "version",
+          "rel": "member",
+          "type": "application/vnd.fr.grid5000.api.Version+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/nancy/versions",
+          "title": "versions",
+          "rel": "collection",
+          "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/nancy",
+          "rel": "self",
+          "type": "application/vnd.fr.grid5000.api.Site+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/nancy/clusters",
+          "title": "clusters",
+          "rel": "collection",
+          "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/nancy/environments",
+          "title": "environments",
+          "rel": "collection",
+          "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000",
+          "rel": "parent",
+          "type": "application/vnd.fr.grid5000.api.Grid+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/nancy/status",
+          "title": "status",
+          "rel": "collection",
+          "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/nancy/metrics",
+          "title": "metrics",
+          "rel": "collection",
+          "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/nancy/jobs",
+          "title": "jobs",
+          "rel": "collection",
+          "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/nancy/deployments",
+          "title": "deployments",
+          "rel": "collection",
+          "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+        }
+      ],
+      "description": "",
+      "longitude": 6.2,
+      "web": null,
+      "sys_admin_contact": null
+    },
+    {
+      "name": "Orsay",
+      "latitude": 48.7,
+      "location": "Orsay, France",
+      "security_contact": null,
+      "uid": "orsay",
+      "type": "site",
+      "user_support_contact": null,
+      "version": "e02cd5e61f7374fd8f28c8c8a6b9843419e3512b",
+      "links": [
+        {
+          "href": "/2.0/grid5000/sites/orsay/versions/e02cd5e61f7374fd8f28c8c8a6b9843419e3512b",
+          "title": "version",
+          "rel": "member",
+          "type": "application/vnd.fr.grid5000.api.Version+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/orsay/versions",
+          "title": "versions",
+          "rel": "collection",
+          "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/orsay",
+          "rel": "self",
+          "type": "application/vnd.fr.grid5000.api.Site+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/orsay/clusters",
+          "title": "clusters",
+          "rel": "collection",
+          "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/orsay/environments",
+          "title": "environments",
+          "rel": "collection",
+          "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000",
+          "rel": "parent",
+          "type": "application/vnd.fr.grid5000.api.Grid+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/orsay/status",
+          "title": "status",
+          "rel": "collection",
+          "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/orsay/metrics",
+          "title": "metrics",
+          "rel": "collection",
+          "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/orsay/jobs",
+          "title": "jobs",
+          "rel": "collection",
+          "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/orsay/deployments",
+          "title": "deployments",
+          "rel": "collection",
+          "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+        }
+      ],
+      "description": "",
+      "longitude": 2.2,
+      "email_contact": null,
+      "web": null,
+      "sys_admin_contact": null
+    },
+    {
+      "name": "Rennes",
+      "latitude": 48.1,
+      "location": "Rennes, France",
+      "security_contact": "rennes-staff@lists.grid5000.fr",
+      "uid": "rennes",
+      "type": "site",
+      "user_support_contact": "rennes-staff@lists.grid5000.fr",
+      "version": "e02cd5e61f7374fd8f28c8c8a6b9843419e3512b",
+      "links": [
+        {
+          "href": "/2.0/grid5000/sites/rennes/versions/e02cd5e61f7374fd8f28c8c8a6b9843419e3512b",
+          "title": "version",
+          "rel": "member",
+          "type": "application/vnd.fr.grid5000.api.Version+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/rennes/versions",
+          "title": "versions",
+          "rel": "collection",
+          "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/rennes",
+          "rel": "self",
+          "type": "application/vnd.fr.grid5000.api.Site+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/rennes/clusters",
+          "title": "clusters",
+          "rel": "collection",
+          "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/rennes/environments",
+          "title": "environments",
+          "rel": "collection",
+          "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000",
+          "rel": "parent",
+          "type": "application/vnd.fr.grid5000.api.Grid+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/rennes/status",
+          "title": "status",
+          "rel": "collection",
+          "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/rennes/metrics",
+          "title": "metrics",
+          "rel": "collection",
+          "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/rennes/jobs",
+          "title": "jobs",
+          "rel": "collection",
+          "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/rennes/deployments",
+          "title": "deployments",
+          "rel": "collection",
+          "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+        }
+      ],
+      "description": "",
+      "longitude": -1.6667,
+      "compilation_server": false,
+      "email_contact": "rennes-staff@lists.grid5000.fr",
+      "web": "http://www.irisa.fr",
+      "sys_admin_contact": "rennes-staff@lists.grid5000.fr"
+    },
+    {
+      "name": "Sophia-Antipolis",
+      "latitude": 43.6161,
+      "location": "Sophia-Antipolis, France",
+      "security_contact": "sophia-staff@lists.grid5000.fr",
+      "uid": "sophia",
+      "type": "site",
+      "user_support_contact": "sophia-staff@lists.grid5000.fr",
+      "version": "e02cd5e61f7374fd8f28c8c8a6b9843419e3512b",
+      "links": [
+        {
+          "href": "/2.0/grid5000/sites/sophia/versions/e02cd5e61f7374fd8f28c8c8a6b9843419e3512b",
+          "title": "version",
+          "rel": "member",
+          "type": "application/vnd.fr.grid5000.api.Version+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/sophia/versions",
+          "title": "versions",
+          "rel": "collection",
+          "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/sophia",
+          "rel": "self",
+          "type": "application/vnd.fr.grid5000.api.Site+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/sophia/clusters",
+          "title": "clusters",
+          "rel": "collection",
+          "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/sophia/environments",
+          "title": "environments",
+          "rel": "collection",
+          "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000",
+          "rel": "parent",
+          "type": "application/vnd.fr.grid5000.api.Grid+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/sophia/status",
+          "title": "status",
+          "rel": "collection",
+          "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/sophia/metrics",
+          "title": "metrics",
+          "rel": "collection",
+          "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/sophia/jobs",
+          "title": "jobs",
+          "rel": "collection",
+          "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/sophia/deployments",
+          "title": "deployments",
+          "rel": "collection",
+          "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+        }
+      ],
+      "description": "",
+      "longitude": 7.0678,
+      "compilation_server": false,
+      "email_contact": "sophia-staff@lists.grid5000.fr",
+      "web": null,
+      "sys_admin_contact": "sophia-staff@lists.grid5000.fr"
+    },
+    {
+      "name": "Toulouse",
+      "latitude": 43.6167,
+      "location": "Toulouse, France",
+      "security_contact": null,
+      "uid": "toulouse",
+      "type": "site",
+      "user_support_contact": null,
+      "version": "e02cd5e61f7374fd8f28c8c8a6b9843419e3512b",
+      "links": [
+        {
+          "href": "/2.0/grid5000/sites/toulouse/versions/e02cd5e61f7374fd8f28c8c8a6b9843419e3512b",
+          "title": "version",
+          "rel": "member",
+          "type": "application/vnd.fr.grid5000.api.Version+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/toulouse/versions",
+          "title": "versions",
+          "rel": "collection",
+          "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/toulouse",
+          "rel": "self",
+          "type": "application/vnd.fr.grid5000.api.Site+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/toulouse/clusters",
+          "title": "clusters",
+          "rel": "collection",
+          "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/toulouse/environments",
+          "title": "environments",
+          "rel": "collection",
+          "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000",
+          "rel": "parent",
+          "type": "application/vnd.fr.grid5000.api.Grid+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/toulouse/status",
+          "title": "status",
+          "rel": "collection",
+          "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/toulouse/metrics",
+          "title": "metrics",
+          "rel": "collection",
+          "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/toulouse/jobs",
+          "title": "jobs",
+          "rel": "collection",
+          "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+        },
+        {
+          "href": "/2.0/grid5000/sites/toulouse/deployments",
+          "title": "deployments",
+          "rel": "collection",
+          "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+        }
+      ],
+      "description": "",
+      "longitude": 1.4333,
+      "email_contact": null,
+      "web": null,
+      "sys_admin_contact": null
+    }
+  ],
+  "total": 9,
+  "version": "e02cd5e61f7374fd8f28c8c8a6b9843419e3512b",
+  "links": [
+    {
+      "href": "/2.0/grid5000/sites/versions/e02cd5e61f7374fd8f28c8c8a6b9843419e3512b",
+      "title": "version",
+      "rel": "member",
+      "type": "application/vnd.fr.grid5000.api.Version+json;level=1"
+    },
+    {
+      "href": "/2.0/grid5000/sites/versions",
+      "title": "versions",
+      "rel": "collection",
+      "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+    },
+    {
+      "href": "/2.0/grid5000/sites",
+      "rel": "self",
+      "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+    }
+  ],
+  "offset": 0
+}

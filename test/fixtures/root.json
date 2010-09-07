@@ -1,0 +1,55 @@
+HTTP/1.1 200 OK
+Date: Tue, 07 Sep 2010 17:41:37 GMT
+Server: Apache/2.2.9 (Debian) Phusion_Passenger/2.2.3 mod_ssl/2.2.9 OpenSSL/0.9.8g
+X-Powered-By: Phusion Passenger (mod_rails/mod_rack) 2.2.3
+Vary: Accept,Accept-Encoding
+ETag: "6bd061336ecf93eae2cf687591ac58a818f4f504"
+Allow: GET
+Cache-Control: public, must-revalidate, proxy-revalidate, max-age=60, s-maxage=60
+Last-Modified: Mon, 30 Aug 2010 16:05:28 GMT
+Content-Length: 998
+Status: 200
+Content-Type: application/vnd.fr.grid5000.api.grid+json;level=1
+Age: 10
+X-Cache: HIT from api-proxy.rennes.grid5000.fr
+X-Cache-Lookup: HIT from api-proxy.rennes.grid5000.fr:3128
+Via: 1.0 api-server.sophia.grid5000.fr, 1.0 api-proxy.rennes.grid5000.fr:3128 (squid/2.6.STABLE18)
+Via: 1.1 api-proxy.rennes.grid5000.fr:4444
+Via: 1.1 api.grid5000.fr
+
+{
+  "uid": "grid5000",
+  "type": "grid",
+  "version": "e02cd5e61f7374fd8f28c8c8a6b9843419e3512b",
+  "links": [
+    {
+      "href": "/2.0/grid5000/versions/e02cd5e61f7374fd8f28c8c8a6b9843419e3512b",
+      "title": "version",
+      "rel": "member",
+      "type": "application/vnd.fr.grid5000.api.Version+json;level=1"
+    },
+    {
+      "href": "/2.0/grid5000/versions",
+      "title": "versions",
+      "rel": "collection",
+      "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+    },
+    {
+      "href": "/2.0/grid5000",
+      "rel": "self",
+      "type": "application/vnd.fr.grid5000.api.Grid+json;level=1"
+    },
+    {
+      "href": "/2.0/grid5000/environments",
+      "title": "environments",
+      "rel": "collection",
+      "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+    },
+    {
+      "href": "/2.0/grid5000/sites",
+      "title": "sites",
+      "rel": "collection",
+      "type": "application/vnd.fr.grid5000.api.Collection+json;level=1"
+    }
+  ]
+}
