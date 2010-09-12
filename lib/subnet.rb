@@ -66,9 +66,10 @@ configure :test do
   # FIXME Understand why this is needed for the test suite to pass
   session.root.sites[:rennes].jobs
 
-  redis = Redis.new
-  set :redis, redis
+  # Run tests on DB 15
+  redis = Redis.new({ :db => 15, :timeout => 1 })
   redis.flushall
+  set :redis, redis
 
   site = 'rennes'
   (0..1).each { |i| redis.rpush(subnets_key(site), "10.#{@subnets[site].first}.#{i}.0") }
