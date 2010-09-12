@@ -34,18 +34,19 @@ configure :production do
   session = Restfully::Session.new(:configuration_file => ENV['RESTFULLY_CONFIG'])
   set :grid, session.root
 
-  settings.redis = Redis.new
+  redis = Redis.new
+  set :redis, redis
 
   @subnets.each do |site, subnets|
     subnets.each do |subnet|
-      (0..255).each { |i| settings.redis.rpush(subnets_key(site), "10.#{subnet}.#{i}.0") }
+      (0..255).each { |i| redis.rpush(subnets_key(site), "10.#{subnet}.#{i}.0") }
 
       # KaVLAN? https://www.grid5000.fr/mediawiki/index.php/Xen_related_tools#choose_static_ip_address
-      (0..255).each { |i| settings.redis.rpush(subnets_key(site), "10.#{subnet + 2}.#{i}.0") }
+      (0..255).each { |i| redis.rpush(subnets_key(site), "10.#{subnet + 2}.#{i}.0") }
 
       # Don't include subnet 255 because the last two IPs are used by the infrastructure
       # (DHCP server and gateway)
-      (0..254).each { |i| settings.redis.rpush(subnets_key(site), "10.#{subnet + 3}.#{i}.0") }
+      (0..254).each { |i| redis.rpush(subnets_key(site), "10.#{subnet + 3}.#{i}.0") }
     end
   end
 end
