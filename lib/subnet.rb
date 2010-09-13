@@ -31,8 +31,7 @@ configure do
 end
 
 configure :production do
-  session = Restfully::Session.new(:configuration_file => ENV['RESTFULLY_CONFIG'])
-  set :grid, session.root
+  set :session, Restfully::Session.new(:configuration_file => ENV['RESTFULLY_CONFIG'])
 
   redis = Redis.new
   set :redis, redis
@@ -52,20 +51,6 @@ configure :production do
 end
 
 configure :test do
-  WebMock.stub_request(:get, 'https://api.grid5000.fr/2.0/grid5000').to_return(File.new(File.dirname(__FILE__) + '/../test/fixtures/root.json'))
-  WebMock.stub_request(:get, 'https://api.grid5000.fr/2.0/grid5000/sites').to_return(File.new(File.dirname(__FILE__) + '/../test/fixtures/sites.json'))
-  WebMock.stub_request(:get, 'https://api.grid5000.fr/2.0/grid5000/sites/rennes').to_return(File.new(File.dirname(__FILE__) + '/../test/fixtures/rennes.json'))
-  WebMock.stub_request(:get, 'https://api.grid5000.fr/2.0/grid5000/sites/rennes/jobs').to_return(File.new(File.dirname(__FILE__) + '/../test/fixtures/jobs.json'))
-
-  require 'logger'
-  #logger = Logger.new(STDOUT)
-  #logger.level = Logger::DEBUG
-  session = Restfully::Session.new(:base_uri => 'https://api.grid5000.fr/2.0/grid5000')
-  set :grid, session.root
-
-  # FIXME Understand why this is needed for the test suite to pass
-  session.root.sites[:rennes].jobs
-
   # Run tests on DB 15
   redis = Redis.new({ :db => 15, :timeout => 1 })
   redis.flushall
@@ -78,11 +63,11 @@ end
 Thread.new do
   while true
     sleep 60
-    settings.grid.sites.map { |s| s['uid'] }.each do |site|
+    settings.session.root.sites.map { |s| s['uid'] }.each do |site|
       jobs = settings.redis.smembers(jobs_key(site))
       jobs.each do |job_id|
         begin
-          job = settings.grid.sites[site.to_sym].jobs[job_id.to_sym].reload
+          job = settings.session.root.sites[site.to_sym].jobs[job_id.to_sym].reload
           if job['state'] != 'running'
             job_subnets = settings.redis.smembers(job_key(site, job_id))
             job_subnets.each do |subnet|
@@ -106,7 +91,7 @@ end
 
 post '/sites/:site/jobs/:job_id/subnets' do |site, job_id|
  begin
-    job = settings.grid.sites[site.to_sym].jobs[job_id.to_sym]
+    job = settings.session.root.sites[site.to_sym].jobs[job_id.to_sym]
     return 403 if job['state'] != 'running'
   rescue Restfully::HTTP::Error
     return 500

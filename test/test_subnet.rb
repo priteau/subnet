@@ -8,6 +8,15 @@ class TestSubnet < Test::Unit::TestCase
       Sinatra::Application
     end
 
+    setup do
+      WebMock.stub_request(:get, 'https://api.grid5000.fr/2.0/grid5000').to_return(File.new(File.dirname(__FILE__) + '/../test/fixtures/root.json'))
+      WebMock.stub_request(:get, 'https://api.grid5000.fr/2.0/grid5000/sites').to_return(File.new(File.dirname(__FILE__) + '/../test/fixtures/sites.json'))
+      WebMock.stub_request(:get, 'https://api.grid5000.fr/2.0/grid5000/sites/rennes').to_return(File.new(File.dirname(__FILE__) + '/../test/fixtures/rennes.json'))
+      WebMock.stub_request(:get, 'https://api.grid5000.fr/2.0/grid5000/sites/rennes/jobs').to_return(File.new(File.dirname(__FILE__) + '/../test/fixtures/jobs.json'))
+
+      set :session, Restfully::Session.new(:base_uri => 'https://api.grid5000.fr/2.0/grid5000')
+    end
+
     should "catch bad requests" do
       post '/'
       assert_equal 404, last_response.status
