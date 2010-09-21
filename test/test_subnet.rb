@@ -29,14 +29,21 @@ class TestSubnet < Test::Unit::TestCase
       assert_equal 204, last_response.status
     end
 
-    should "allocate subnets until there are no more available" do
+    should "allocate subnets until there are no more available, and create resources" do
       post '/sites/rennes/jobs/359758/subnets'
       assert_equal 200, last_response.status
       assert_equal "10.156.0.0\n", last_response.body
+      get '/sites/rennes/jobs/359758/subnets/10.156.0.0'
+      assert_equal 200, last_response.status
+      assert_equal (1..254).map { |i| "10.156.0.#{i}\n" }.join(""), last_response.body
       post '/sites/rennes/jobs/359758/subnets'
       assert_equal 200, last_response.status
       assert_equal "10.156.1.0\n", last_response.body
+      get '/sites/rennes/jobs/359758/subnets/10.156.1.0'
+      assert_equal (1..254).map { |i| "10.156.1.#{i}\n" }.join(""), last_response.body
       post '/sites/rennes/jobs/359758/subnets'
+      assert_equal 404, last_response.status
+      get '/sites/rennes/jobs/359758/subnets/10.156.2.0'
       assert_equal 404, last_response.status
     end
 

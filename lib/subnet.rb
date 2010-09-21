@@ -89,6 +89,15 @@ error 403 do
   "Access forbidden because the job you provided is not running\n"
 end
 
+get '/sites/:site/jobs/:job_id/subnets/:subnet' do |site, job_id, subnet|
+  if settings.redis.sismember(job_key(site, job_id), subnet)
+    subnet.sub!(/\.0$/, '.%d')
+    return (1..254).map { |i| subnet % i + "\n" }
+  else
+    return 404
+  end
+end
+
 post '/sites/:site/jobs/:job_id/subnets' do |site, job_id|
  begin
     job = settings.session.root.sites[site.to_sym].jobs[job_id.to_sym]
