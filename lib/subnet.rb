@@ -93,8 +93,8 @@ post '/sites/:site/jobs/:job_id/subnets' do |site, job_id|
  begin
     job = settings.session.root.sites[site.to_sym].jobs[job_id.to_sym]
     return 403 if job['state'] != 'running'
-  rescue Restfully::HTTP::Error
-    return 500
+  rescue Restfully::HTTP::Error => e
+    halt 500, "Error: Couldn't query OAR API, received the following error:\n\n" + e.message
   end
 
   subnet = settings.redis.lpop(subnets_key(site))
