@@ -62,8 +62,8 @@ Examples
     RestClient.get "http://localhost:9292/sites/#{site}/jobs/#{job}/subnets/#{base_ip}" # Gets all IPs
     RestClient.delete "http://localhost:9292/sites/#{site}/jobs/#{job}/subnets" # Cancels the reservation
 
-Deployment notes
-----------------
+Deployment
+----------
 
 The dependencies of this service are described using Bundler
 (http://gembundler.com/).
@@ -88,6 +88,9 @@ Finally, start the service:
 TODO
 ----
 
+* Allow to unregister only one subnet and not all subnets associated with a job
+* Add JSON support in responses to make the API easier to use from Ruby, plain
+text being best for curl
 * Allow to specify the Redis server address (probably in config.ru)
 * Add an authentification layer (ident/basic auth) to make sure subnet
 reservation is associated with a job owned by the user
